@@ -4,7 +4,7 @@ using Moq;
 using Infrastructure.TorreHanoi.ServiceAgent;
 using System.Threading.Tasks;
 
-namespace Tests.TorreHanoi.Infrastructure
+namespace TorreHanoi.Tests.Infrastructure
 {
     [TestClass]
     public class LoggerUnit

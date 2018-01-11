@@ -18,6 +18,7 @@ namespace Infrastructure.TorreHanoi.Log
 
         public bool Logar(string mensgem, TipoLog tipo)
         {
+            //return true;
             return _tiposLogsDisponiveis.Contains(tipo) && Task.Run(async () => await _serviceAgent.Post(mensgem)).Result;
         }
 

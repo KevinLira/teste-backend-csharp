@@ -7,7 +7,7 @@ using Infrastructure.TorreHanoi.Cache;
 using Infrastructure.TorreHanoi.Queue;
 using System.Collections.Generic;
 
-namespace Tests.TorreHanoi.Infrastructure
+namespace TorreHanoi.Tests.Infrastructure
 {
     [TestClass]
     public class QueueUnit

@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Infrastructure.TorreHanoi.ServiceAgent;
 
-namespace Tests.TorreHanoi.Infrastructure
+namespace TorreHanoi.Tests.Infrastructure
 {
     [TestClass]
     public class SlackServiceAgentUnit

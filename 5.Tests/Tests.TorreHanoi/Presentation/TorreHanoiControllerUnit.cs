@@ -12,7 +12,7 @@ using Moq;
 using Newtonsoft.Json;
 using Presentation.TorreHanoi.Controllers;
 
-namespace Tests.TorreHanoi.Presentation
+namespace TorreHanoi.Tests.Presentation
 {
     [TestClass]
     public class TorreHanoiControllerUnit

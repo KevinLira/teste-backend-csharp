@@ -7,7 +7,7 @@ using Infrastructure.TorreHanoi.Log;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
-namespace Tests.TorreHanoi.Domain
+namespace TorreHanoi.Tests
 {
     [TestClass]
     public class TorreHanoiDomainServiceUnit

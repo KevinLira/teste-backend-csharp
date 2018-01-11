@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Presentation", "1.Presentation", "{812061B1-EA11-43C3-A050-5140664FF946}"
 EndProject
@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.TorreHanoi", "3.Doma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.TorreHanoi.Queue", "4.Infrastructure\Infrastructure.TorreHanoi.Queue\Infrastructure.TorreHanoi.Queue.csproj", "{CC2A84F3-6DD7-4CD9-A65E-6E7E0A4D258E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.TorreHanoi", "5.Tests\Tests.TorreHanoi\Tests.TorreHanoi.csproj", "{0A81C063-151B-4504-AED7-F477DC4B96A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TorreHanoi.Tests", "5.Tests\Tests.TorreHanoi\TorreHanoi.Tests.csproj", "{0A81C063-151B-4504-AED7-F477DC4B96A7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.TorreHanoi.Ioc", "4.Infrastructure\Infrastructure.TorreHanoi.Ioc\Infrastructure.TorreHanoi.Ioc.csproj", "{A46FE75E-50FF-47E0-AB5F-D0BBCF01C01C}"
 EndProject
@@ -94,5 +94,8 @@ Global
 		{18D52A96-F541-443E-8595-ED2DB2DCCDFF} = {C686F904-FB17-4A9D-83CA-70788DC81D56}
 		{F3537F21-A3D4-4642-A560-2EA23EF9DD33} = {C686F904-FB17-4A9D-83CA-70788DC81D56}
 		{415D27DD-10D7-49F6-A109-3556A6E3C290} = {C686F904-FB17-4A9D-83CA-70788DC81D56}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D8D66B94-FEB6-4BA1-84DB-6DD14477EDAF}
 	EndGlobalSection
 EndGlobal

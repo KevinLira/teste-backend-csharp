@@ -1,9 +1,10 @@
 ﻿using System;
 using Infrastructure.TorreHanoi.Log;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Domain.TorreHanoi;
 using Moq;
 
-namespace Tests.TorreHanoi.Domain
+namespace TorreHanoi.Tests
 {
     [TestClass]
     public class TorreHanoiUnit
@@ -23,14 +24,23 @@ namespace Tests.TorreHanoi.Domain
         [TestCategory(CategoriaTeste)]
         public void Construtor_Deve_Retornar_Sucesso()
         {
-            Assert.Fail();
+            var torreHanoi = new Domain.TorreHanoi.TorreHanoi(3, _mockLogger.Object);
+            Assert.IsNotNull(torreHanoi.Id);
+            Assert.IsNotNull(torreHanoi.Discos);
+            Assert.IsNotNull(torreHanoi.Destino);
+            Assert.IsNotNull(torreHanoi.Intermediario);
+            Assert.IsNotNull(torreHanoi.Origem);
+            Assert.IsNotNull(torreHanoi.DataCriacao);
+            Assert.AreEqual(torreHanoi.Status,TipoStatus.Pendente);
+            Assert.IsNotNull(torreHanoi.PassoAPasso);
         }
 
         [TestMethod]
         [TestCategory(CategoriaTeste)]
         public void Processar_Deverar_Retornar_Sucesso()
         {
-            Assert.Fail();
+            var torreHanoi = new Domain.TorreHanoi.TorreHanoi(3,_mockLogger.Object);
+            Assert.IsTrue(torreHanoi.Processar());
         }
     }
 }

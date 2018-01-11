@@ -1,7 +1,7 @@
 ﻿using Infrastructure.TorreHanoi.Cache;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Tests.TorreHanoi.Infrastructure
+namespace TorreHanoi.Tests.Infrastructure
 {
     [TestClass]
     public class CacheManagerUnit

@@ -33,8 +33,9 @@ namespace Domain.TorreHanoi
         public TipoStatus Status { get; private set; }
         public ICollection<string> PassoAPasso { get; }
 
-        public void Processar()
+        public bool Processar()
         {
+            var retorno = true;
             Status = TipoStatus.Processando;
             _log.Logar($"TorreHanoi id {Id} -> Iniciando Processamento", TipoLog.Fluxo);
             try
@@ -48,16 +49,18 @@ namespace Domain.TorreHanoi
             {
                 Status = TipoStatus.FinalizadoErro;
                 _log.Logar($"TorreHanoi id {Id} -> Ocorreu um erro ao finalizar o processo. Ex: {ex.Message}", TipoLog.Fluxo);
+                retorno = false;
             }
             finally
             {
                 DataFinalizacao = DateTime.Now;
             }
+            return retorno;
         }
 
         private void Resolver(int numeroDiscosRestante, Pino origem, Pino intermediario, Pino destino)
         {
-            if (numeroDiscosRestante <= 1)
+            if (numeroDiscosRestante < 1)
             {
                 return;
             }
@@ -69,7 +72,9 @@ namespace Domain.TorreHanoi
 
         private void MoverDisco(Pino pinoInicio, Pino pinoFim)
         {
-            Thread.Sleep(1000);
+#if(DEBUG)
+            //Thread.Sleep(100);
+#endif
             var disco = pinoInicio.RemoverDisco();
             pinoFim.AdicionarDisco(disco);
             PassoAPasso.Add($"Movendo disco {disco.Id} do pino {pinoInicio.Tipo}, para o pino {pinoFim.Tipo}");
